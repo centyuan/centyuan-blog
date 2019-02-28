@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>centyuan</title>
+    <meta name="viewport",content="width=device-width,initial-scale=1">
+{#    <link rel="stylesheet" href="/static/css/bootstrap.css">#}
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.0.2/echarts-en.min.js"></script>
+    <link rel="icon" href="/static/img/favicon_centyuan.ico" type="img/x-ico">
+    <link rel="stylesheet" href="/static/css/domain.css">
+     <!--
+    <link rel="stylesheet",href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    jQuery文件。务必在bootstrap.min.js 之前引入
+    <script src="https://cdn.staticfile.orgs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></scrpt>
+    -->
+
+</head>
+<body>
+<div class="headband"></div>
+<div class="container" style="width: 100%">
+<div class="row">
+    {% include "base.html" %}
+
+    <div class="col-md-8"  style="background-color: #FFFFFF; margin-left: 10px">
+    <div class="text-right" style="margin-top: 10px"><a href="">登录/注册</a></div>
+     <div>
+         <div class="head_text">
+            <h2 class="text-info">欢迎登录/注册用户</h2>
+            <small>您可以评论和订阅我的博文，后面可能会推出一些活动</small>
+         </div>
+         <form id="user_form" class="main_form" method="post">
+                <input type="hidden" name="csrfmiddlewaretoken" value="FjAWooFh8Ecl7hSdSpfMy0FF1YFrgL3i">
+                <!--<input id="user_csrf" type="hidden" name="csrfmiddlewaretoken" value="" />-->
+                <input id="reback_url" type="hidden" value="http://yshblog.com/">
+                <input id="public_key" type="hidden" value="" name="public_key">
+
+                <div id="user_control">
+                    <div class="control-group">
+                        <label class="control-label" for="user_name">邮箱：</label>
+                        <input type="text" id="user_name" class="input-xlarge" name="user_name" placeholder="请输入邮箱" autocomplete="off">
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="user_pwd">密码：</label>
+                        <input type="password" id="user_pwd" class="input-xlarge" name="user_pwd" placeholder="请输入密码" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="account_list">
+                    <span class="other_account">第三方账号登录：</span>
+
+                        <a href="/oauth/oauth_login/QQ?state=http://yshblog.com/" title="QQ登录">
+                            <img src="/static/img/connect/logo_qq.png" alt="QQ登录">
+                        </a>
+
+                        <a href="/oauth/oauth_login/Sina?state=http://yshblog.com/" title="微博登录">
+                            <img src="/static/img/connect/logo_sina.png" alt="微博登录">
+                        </a>
+
+                        <a href="/oauth/oauth_login/Github?state=http://yshblog.com/" title="Github登录">
+                            <img src="/static/img/connect/logo_github.png" alt="Github登录">
+                        </a>
+
+                </div>
+
+                <p id="tip_text" style="color:red;"></p>
+
+                <div class="form_buttons">
+                    <p>我是老用户(默认)：</p>
+                    <input type="submit" class="btn btn-primary" value="登录">
+                    <a class="btn btn-default" href="/user/password_lost">忘记密码</a>
+                </div>
+
+                <div class="form_buttons" style="margin-left:1.5em;">
+                    <p>我是新用户：</p>
+                    <input id="user_reg" type="button" class="btn btn-primary" value="注册">
+                </div>
+    </form>
+     </div>
+    </div>
+</div>
+</div>
+
+<hr>
+<footer>
+    <div class="footer">
+        <p class="pull-right">
+            <a href="#top"><i class="fa fa-arrow-up fa-lg" style="margin-right: 25px"></i></a>
+        </p>
+        <div style="text-align: center">
+            <p >@2018 centyuan <br/> <span>Welcome</span></p>
+
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

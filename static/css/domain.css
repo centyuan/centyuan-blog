@@ -1,0 +1,174 @@
+
+    body {
+        background:#F0F0F0;
+        padding-bottom: 60px;
+    }
+
+    .headband {
+         height: 3px;
+         background: #222;
+    }
+    .site-meta {
+        text-align: center;
+        padding: 18px 0;
+    }
+    .site-nav a {
+           color: #3c3c3c;
+    }
+    .site-detail {
+        margin-top: 10px;
+
+    }
+    .site-detail li {
+        list-style-type: none;
+    }
+    .site-detail a {
+        color: #0f0f0f;
+    }
+
+    .site-link {
+        margin-top: 15px;
+    }
+    .site-link a {
+        color: #0f0f0f;
+    }
+    .content {
+        margin-top: 40px;
+        padding: 10px 10px;
+    }
+    .title-name a {
+        font-size: 28px;
+        color: cornflowerblue;
+    }
+    .artile-brief .title-name {
+        text-align: center;
+    }
+    .artile-brief .upload-detail {
+            color: #999;
+            font-family: 'Monda', "PingFang SC", "Microsoft YaHei", sans-serif;
+            font-size: 12px;
+            text-align: center;
+
+    }
+    .artile-brief .introduction {
+            font-size: 20px;
+            color: #555;
+    }
+    .artile-brief .intro-detail {
+            background-color: #0f0f0f;
+            padding:10px 5px ;
+    }
+    .artile-brief .intro-detail span {
+            display: inline-block;
+            text-align: left;
+            font-size: 14px;
+            color: #c5c8c6;
+    }
+    .button-redirection {
+        text-align: center;
+        margin-top: 50px;
+    }
+    .button-redirection a {
+        border-color: #222;
+        color: #222;
+        background: #fff;
+    }
+    .button-redirection a:hover {
+        color: #F0F0F0;
+        background-color: #0f0f0f;
+    }
+    .dividing {
+        margin: 120px 0;
+        border-width:3px;
+        border-color: #e2e2e2
+    }
+    .page-divide {
+        text-align: center;
+    }
+    .footer {
+        margin-top: 10px;
+    }
+    .tag-cloud {
+            text-align: center;
+        }
+    .tag-cloud a {
+            display: inline-block;
+            margin: 10px;
+            border-bottom: 1px solid #999;
+            text-decoration:none
+        }
+    .tag-cloud a:hover {
+            border-bottom: solid #3c3c3c;
+        }
+
+    .archive-number {
+           text-align: center;
+            font-size: 25px;
+        }
+    .archive-one {
+        margin: 20px 0;
+    }
+    .archive-one span{
+        font-size: 10px;
+        color: #999;
+    }
+    .archive-one a {
+          font-size: 16px;
+    }
+    .category-all-title {
+        text-align: center;
+        color: #555;
+        font-size: 20px;
+    }
+    .category-all {
+        margin-top: 20px;
+    }
+    .category-list-item {
+        margin:12px 0;
+    }
+    .category-list-item a {
+        text-decoration: none;
+        border-bottom: 1px solid #999;
+        font-size: 16px;
+    }
+    .category-list-item span{
+        color: #bbb;
+    }
+    .brief-picture {
+        overflow: hidden;
+        width: 150px;
+        height: 120px;
+        overflow: hidden;
+        margin-top: 20px
+    }
+    .logoimg {
+         -webkit-transition: all .3s ease;
+            /* Safari and Chrome */
+            -moz-transition: all .3s ease;
+            /* Firefox */
+            -o-transition: all .3s ease;
+            /* Opera */
+            -ms-transition: all .3s ease;
+            /* IE 9 */
+            transition: all .3s ease;
+            /* 图片自适应属性*/
+            display: block;
+            max-width: 100%;
+            height: auto;
+    }
+    .logoimg:hover {
+            transform-origin: center center;
+            transform: scale(1.1,1.1);
+            -webkit-transform-origin: center center;
+            -webkit-transform: scale(1.1, 1.1);
+            -moz-transform-origin: center center;
+            -moz-transform: scale(1.1, 1.1);
+            -o-transform-origin: center center;
+            -o-transform: scale(1.1,1.1);
+            -ms-transform-origin: center center;
+            -ms-transform: scale(1.1,1.1);
+    }
+    .site-state {
+        background-color: #ffffff;
+        margin-top: 20px;
+    }

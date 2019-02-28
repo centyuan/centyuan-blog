@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>centyuan</title>
+    <meta name="viewport",content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <!--<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="icon" href="/static/img/favicon_centyuan.ico" type="img/x-ico">
+    <link rel="stylesheet" href="/static/css/domain.css">
+     <!--
+    <link rel="stylesheet",href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    jQuery文件。务必在bootstrap.min.js 之前引入
+    <script src="https://cdn.staticfile.orgs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></scrpt>
+    -->
+
+</head>
+<body>
+<div class="headband"></div>
+<div class="container" style="width: 100%">
+<div class="row">
+    {% include "base.html" %}
+
+    <div class="col-md-8"  style="background-color: #FFFFFF; margin-left: 10px">
+     <div class="content-wrap">
+         <div class="content">
+             {% for blog in search_blog.object_list %}
+                 <article class="artile-brief">
+            <header>
+                <div class="title-name">
+                    <h1><a href="#">{{ blog.title }}</a></h1>
+                </div>
+                <div class="upload-detail">
+                    <span>发表于<time pubdate="pubdate">{{ blog.upload_time }}</time></span>
+                    &nbsp|&nbsp
+                    <span>分类于 {{ blog.category }}</span>
+                </div>
+                <h2 class="introduction">引言</h2><p></p>
+                <div class="intro-detail">
+                       <span>
+                       {{ blog.introduction }}
+                       </span>
+                    </p>
+                </div>
+                <div class="button-redirection">
+
+                            <a class="btn" href="{% url 'blog_detail' blog.id %}">
+                                  Read more »
+                                </a>
+
+                </div>
+            </header>
+             <hr class="dividing">
+         </article>
+             {% endfor %}
+
+         </div>
+
+         <div class="page-divide">
+             <ul class="pagination pagination-lg">
+
+                 {% if search_blog.has_previous %}
+                     <li> <a href="?{{ search_blog.previous_page_number.querystring }}">&laquo;</a></li>
+                 {% endif %}
+                 {% for page in search_blog.pages %}
+                     {% if page %}
+                         {% ifequal page search_blog.number %}
+                             <li class="active"><a href="?{{ page.querystring }}">{{ page }}</a></li>
+                         {% else  %}
+                             <li><a href="?{{ page.querystring }}" class="page">{{ page }}</a></li>
+                         {% endifequal %}
+                     {% else %}
+                        <li><a href="">...</a></li>
+                     {% endif %}
+                 {% endfor %}
+                 {% if search_blog.has_next %}
+                    <li><a href="?{{ search_blog.next_page_number.querystring }}">&raquo;</a></li>
+                 {% endif %}
+{#                    <li><a href="#">&laquo;</a></li>#}
+{#                    <li class="active"><a href="#">1</a></li>#}
+{#                    <li><a href="#">2</a></li>#}
+{#                    <li class="active"><a href="#">3</a></li><li><a href="#">4</a></li>#}
+{#                    <li><a href="#">5</a></li>#}
+{#                    <li><a href="#">&raquo;</a> </li>#}
+             </ul>
+
+         </div>
+     </div>
+    </div>
+</div>
+</div>
+<hr>
+<footer>
+    <div class="footer">
+        <p class="pull-right">
+            <a href="#top"><i class="fa fa-arrow-up fa-lg" style="margin-right: 25px"></i></a>
+        </p>
+        <div style="text-align: center">
+            <p >@2018 centyuan <br/> <span>Welcome</span></p>
+
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
