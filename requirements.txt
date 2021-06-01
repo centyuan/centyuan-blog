@@ -33,7 +33,7 @@ ssh-import-id==5.5
 tablib==0.12.1
 ufw==0.35
 unicodecsv==0.14.1
-urllib3==1.13.1
+urllib3==1.26.5
 uWSGI==2.0.17.1
 xlrd==1.1.0
 xlwt==1.3.0
